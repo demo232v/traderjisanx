@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotex Code By Trader Jisan X</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>DevJisanX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4361ee;
-            --primary-hover: #3a56d4;
-            --text-color: #2b2d42;
-            --bg-color: #f8f9fa;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-color: #1e293b;
+            --bg-color: #f8fafc;
             --container-bg: #ffffff;
-            --border-color: #e9ecef;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
-            --info-color: #3498db;
-            --font-main: 'Poppins', sans-serif;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --radius: 12px;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --font-main: 'Roboto', sans-serif;
         }
 
         * {
@@ -33,7 +28,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
-            padding: 0;
+            padding: 2rem;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -41,45 +36,15 @@
             transition: all 0.3s ease;
         }
 
-        .header-image {
-            width: 100%;
-            max-height: 200px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--primary-color);
-        }
-
         .container {
             background-color: var(--container-bg);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 0;
-            max-width: 900px;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 800px;
             width: 100%;
             text-align: center;
             border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-
-        .content-area {
-            padding: 2.5rem;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: -40px auto 1rem;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
         }
 
         h1 {
@@ -89,13 +54,6 @@
             font-weight: 700;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
         h3 {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
@@ -103,16 +61,10 @@
             color: var(--text-color);
         }
 
-        p {
-            margin-bottom: 1rem;
-            color: #495057;
-        }
-
         a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: all 0.2s ease;
-            font-weight: 500;
+            transition: color 0.2s ease;
         }
 
         a:hover {
@@ -120,126 +72,34 @@
             text-decoration: underline;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        button {
             background-color: var(--primary-color);
             color: white;
             border: none;
             padding: 0.75rem 1.5rem;
             font-size: 1rem;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             cursor: pointer;
             transition: all 0.2s ease;
             font-weight: 500;
-            margin: 0.5rem;
-            box-shadow: var(--shadow);
+            margin: 0.5rem 0;
+            display: inline-block;
         }
 
-        .btn:hover {
+        button:hover {
             background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            text-decoration: none;
-        }
-
-        .btn i {
-            margin-right: 8px;
-        }
-
-        .btn-success {
-            background-color: var(--success-color);
-        }
-
-        .btn-success:hover {
-            background-color: #27ae60;
-        }
-
-        .btn-warning {
-            background-color: var(--warning-color);
-        }
-
-        .btn-warning:hover {
-            background-color: #e67e22;
-        }
-
-        .btn-info {
-            background-color: var(--info-color);
-        }
-
-        .btn-info:hover {
-            background-color: #2980b9;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .setup-section {
-            margin: 2rem 0;
-            text-align: left;
-        }
-
-        .setup-card {
-            background-color: #f8f9fa;
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .setup-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .setup-card h3 {
-            display: flex;
-            align-items: center;
-        }
-
-        .setup-card h3 i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 1rem 0;
-            border-radius: var(--radius);
-            background-color: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         #bookmarklet-link {
-            display: inline-flex;
-            align-items: center;
+            display: inline-block;
             padding: 0.75rem 1.5rem;
             background-color: #f1f5f9;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             color: var(--primary-color);
-            font-weight: 600;
-            border: 2px dashed var(--primary-color);
+            font-weight: 500;
+            border: 1px dashed var(--primary-color);
             margin: 1rem 0;
             transition: all 0.2s ease;
         }
@@ -248,11 +108,6 @@
             background-color: #e2e8f0;
             text-decoration: none;
             border-style: solid;
-            transform: translateY(-2px);
-        }
-
-        #bookmarklet-link i {
-            margin-right: 8px;
         }
 
         #instructions {
@@ -260,7 +115,7 @@
             margin-top: 1.5rem;
             padding: 1.5rem;
             background-color: #f8fafc;
-            border-radius: var(--radius);
+            border-radius: 0.5rem;
             border-left: 4px solid var(--primary-color);
         }
 
@@ -277,74 +132,46 @@
             width: 100%;
             min-height: 100px;
             padding: 1rem;
-            border-radius: var(--radius);
+            border-radius: 0.5rem;
             border: 1px solid var(--border-color);
-            font-family: 'Courier New', monospace;
+            font-family: monospace;
             resize: vertical;
             margin: 1rem 0;
             background-color: #f1f5f9;
             color: #334155;
-            font-size: 0.9rem;
         }
 
-        .social-links {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+        #copy-code {
+            background-color: var(--success-color);
         }
 
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
-            text-decoration: none;
+        #copy-code:hover {
+            background-color: #0d9f6e;
         }
 
         .page {
             display: none;
-            animation: fadeIn 0.5s ease;
         }
 
         .page.active {
             display: block;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .back-button {
+            background-color: #64748b;
+            margin-top: 1.5rem;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .divider {
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 1.5rem 0;
+        .back-button:hover {
+            background-color: #475569;
         }
 
         @media (max-width: 768px) {
-            .content-area {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
                 padding: 1.5rem;
             }
             
@@ -352,134 +179,44 @@
                 font-size: 1.75rem;
             }
             
-            h2 {
-                font-size: 1.3rem;
-            }
-            
             h3 {
                 font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-
-            .setup-card {
-                padding: 1rem;
-            }
-
-            .header-image {
-                max-height: 150px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header Image -->
-        <img src="https://i.postimg.cc/qv6hzjr5/IMG-5233.jpg" alt="Quotex Code By Trader Jisan X" class="header-image">
+        <!-- First Page (Start Setup) -->
+        <div id="page1" class="page active">
+            <h1>Developer <a href="http://t.me/traderjisanx" target="_blank">@traderjisanx</a></h1>
+            <h3>Official channel <a href="https://t.me/DevJisanX" target="_blank">DevJisanX</a></h3>
+            <h3>Developer with Premium Knowledge</h3>
+            <div style="height: 20px;"></div>
+            <h3>Setup Quotex UI Premium</h3>
+            <button id="start-setup">Start the Setup</button>
+        </div>
 
-        <div class="content-area">
-            <!-- First Page (Home) -->
-            <div id="page1" class="page active">
-                <div class="logo">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h1>Quotex Code <span class="badge">PREMIUM</span></h1>
-                <h2>By Trader Jisan X</h2>
-                <p>Professional Trading Tools and Indicators Setup</p>
-                
-                <div class="social-links">
-                    <a href="http://t.me/traderjisanx" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-                    <a href="https://t.me/DevJisanX" target="_blank" title="Channel"><i class="fas fa-bullhorn"></i></a>
-                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                
-                <div class="divider"></div>
-                
-                <h2><i class="fas fa-cog"></i> Setup Instructions</h2>
-                <p>Select your platform to view detailed setup instructions:</p>
-                
-                <div class="setup-section">
-                    <div class="setup-card">
-                        <h3><i class="fab fa-windows"></i> Windows Setup</h3>
-                        <p>Complete guide to install and configure on Windows devices.</p>
-                        <button class="btn btn-info watch-btn" data-video="https://drive.google.com/file/d/YOUR_VIDEO_ID_1/preview">
-                            <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
-                    </div>
-                    
-                    <div class="setup-card">
-                        <h3><i class="fab fa-android"></i> Android Setup</h3>
-                        <p>Step-by-step instructions for Android smartphones and tablets.</p>
-                        <button class="btn btn-success watch-btn" data-video="https://drive.google.com/file/d/YOUR_VIDEO_ID_2/preview">
-                            <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
-                    </div>
-                    
-                    <div class="setup-card">
-                        <h3><i class="fab fa-apple"></i> iOS Setup</h3>
-                        <p>Installation guide for iPhone and iPad users.</p>
-                        <button class="btn btn-warning watch-btn" data-video="https://drive.google.com/file/d/YOUR_VIDEO_ID_3/preview">
-                            <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
-                    </div>
-                </div>
-                
-                <button id="bookmarklet-btn" class="btn">
-                    <i class="fas fa-bookmark"></i> Bookmarklet Setup
-                </button>
+        <!-- Second Page (Bookmarklet) -->
+        <div id="page2" class="page">
+            <h1>Setup Bookmarklet</h1>
+            <h3>Follow these instructions to install:</h3>
+            
+            <a id="bookmarklet-link" href="#" title="Drag this to your bookmarks bar">TraderJisanX</a>
+            
+            <div id="instructions">
+                <p>- For desktop users, drag the link above to your bookmarks bar.</p>
+                <p>- For mobile and tablet users:</p>
+                <ol>
+                    <li>Add this page to your bookmarks.</li>
+                    <li>Edit the bookmark you just created.</li>
+                    <li>Replace the URL with the following code:</li>
+                </ol>
+                <textarea id="bookmarklet-code" readonly></textarea>
+                <button id="copy-code">Copy Code</button>
             </div>
-
-            <!-- Second Page (Bookmarklet) -->
-            <div id="page2" class="page">
-                <h1><i class="fas fa-bookmark"></i> Bookmarklet Setup</h1>
-                <p>Follow these instructions to install the bookmarklet on your device:</p>
-                
-                <a id="bookmarklet-link" href="#" title="Drag this to your bookmarks bar">
-                    <i class="fas fa-magic"></i> Quotex Premium Tools
-                </a>
-                
-                <div id="instructions">
-                    <h3><i class="fas fa-desktop"></i> Desktop Instructions</h3>
-                    <p>1. Simply drag the button above to your bookmarks bar</p>
-                    
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile Instructions</h3>
-                    <ol>
-                        <li>Bookmark this page in your browser</li>
-                        <li>Edit the bookmark you just created</li>
-                        <li>Replace the URL with the following code:</li>
-                    </ol>
-                    
-                    <textarea id="bookmarklet-code" readonly></textarea>
-                    <button id="copy-code" class="btn btn-success">
-                        <i class="fas fa-copy"></i> Copy Code
-                    </button>
-                </div>
-                
-                <button id="back-button" class="btn btn-outline">
-                    <i class="fas fa-arrow-left"></i> Back to Home
-                </button>
-            </div>
-
-            <!-- Video Modal -->
-            <div id="video-modal" class="page">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h2 id="video-title"><i class="fas fa-play-circle"></i> Setup Video</h2>
-                    <button id="close-video" class="btn btn-outline" style="margin: 0;">
-                        <i class="fas fa-times"></i> Close
-                    </button>
-                </div>
-                
-                <div class="video-container">
-                    <iframe id="setup-video" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-                
-                <button id="back-from-video" class="btn btn-outline" style="margin-top: 1.5rem;">
-                    <i class="fas fa-arrow-left"></i> Back to Setup
-                </button>
-            </div>
+            
+            <button class="back-button" id="back-button">Back to Home</button>
         </div>
     </div>
 
@@ -501,55 +238,26 @@
             copyButton.addEventListener('click', function() {
                 bookmarkletTextarea.select();
                 document.execCommand('copy');
-                copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                copyButton.textContent = 'Copied!';
                 setTimeout(function() {
-                    copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy Code';
+                    copyButton.textContent = 'Copy Code';
                 }, 2000);
             });
             
-            // Page navigation elements
-            const pages = {
-                home: document.getElementById('page1'),
-                bookmarklet: document.getElementById('page2'),
-                video: document.getElementById('video-modal')
-            };
+            // Page navigation
+            const startSetupBtn = document.getElementById('start-setup');
+            const backButton = document.getElementById('back-button');
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
             
-            const buttons = {
-                bookmarkletBtn: document.getElementById('bookmarklet-btn'),
-                backButton: document.getElementById('back-button'),
-                watchBtns: document.querySelectorAll('.watch-btn'),
-                closeVideo: document.getElementById('close-video'),
-                backFromVideo: document.getElementById('back-from-video')
-            };
-            
-            const videoIframe = document.getElementById('setup-video');
-            
-            // Navigation functions
-            function showPage(page) {
-                Object.values(pages).forEach(p => p.classList.remove('active'));
-                page.classList.add('active');
-            }
-            
-            // Event listeners
-            buttons.bookmarkletBtn.addEventListener('click', () => showPage(pages.bookmarklet));
-            buttons.backButton.addEventListener('click', () => showPage(pages.home));
-            buttons.backFromVideo.addEventListener('click', () => showPage(pages.home));
-            buttons.closeVideo.addEventListener('click', () => showPage(pages.home));
-            
-            // Video buttons
-            buttons.watchBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const videoUrl = this.getAttribute('data-video');
-                    videoIframe.src = videoUrl;
-                    showPage(pages.video);
-                });
+            startSetupBtn.addEventListener('click', function() {
+                page1.classList.remove('active');
+                page2.classList.add('active');
             });
             
-            // Reset video when leaving video page
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    videoIframe.src = '';
-                }
+            backButton.addEventListener('click', function() {
+                page2.classList.remove('active');
+                page1.classList.add('active');
             });
         });
     </script>
