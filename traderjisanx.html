@@ -212,25 +212,6 @@
             color: var(--primary-color);
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 1rem 0;
-            border-radius: var(--radius);
-            background-color: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
         #bookmarklet-link {
             display: inline-flex;
             align-items: center;
@@ -405,25 +386,25 @@
                     <div class="setup-card">
                         <h3><i class="fab fa-windows"></i> Windows Setup</h3>
                         <p>Complete guide to install and configure on Windows devices.</p>
-                        <button class="btn btn-info watch-btn" data-video="https://drive.google.com/file/d/YOUR_VIDEO_ID_1/preview">
+                        <a href="https://drive.google.com/file/d/YOUR_WINDOWS_VIDEO_ID/view" target="_blank" class="btn btn-info">
                             <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
+                        </a>
                     </div>
                     
                     <div class="setup-card">
                         <h3><i class="fab fa-android"></i> Android Setup</h3>
                         <p>Step-by-step instructions for Android smartphones and tablets.</p>
-                        <button class="btn btn-success watch-btn" data-video="https://drive.google.com/file/d/1GJE1HlfYaGHvc_YAwoEe_-2bZX03ReOl/view?usp=drivesdk">
+                        <a href="https://drive.google.com/file/d/1GJE1HlfYaGHvc_YAwoEe_-2bZX03ReOl/view?usp=drivesdk" target="_blank" class="btn btn-success">
                             <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
+                        </a>
                     </div>
                     
                     <div class="setup-card">
                         <h3><i class="fab fa-apple"></i> iOS Setup</h3>
                         <p>Installation guide for iPhone and iPad users.</p>
-                        <button class="btn btn-warning watch-btn" data-video="https://drive.google.com/file/d/YOUR_VIDEO_ID_3/preview">
+                        <a href="https://drive.google.com/file/d/YOUR_IOS_VIDEO_ID/view" target="_blank" class="btn btn-warning">
                             <i class="fas fa-play"></i> Watch Setup Video
-                        </button>
+                        </a>
                     </div>
                 </div>
                 
@@ -462,24 +443,6 @@
                     <i class="fas fa-arrow-left"></i> Back to Home
                 </button>
             </div>
-
-            <!-- Video Modal -->
-            <div id="video-modal" class="page">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h2 id="video-title"><i class="fas fa-play-circle"></i> Setup Video</h2>
-                    <button id="close-video" class="btn btn-outline" style="margin: 0;">
-                        <i class="fas fa-times"></i> Close
-                    </button>
-                </div>
-                
-                <div class="video-container">
-                    <iframe id="setup-video" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-                
-                <button id="back-from-video" class="btn btn-outline" style="margin-top: 1.5rem;">
-                    <i class="fas fa-arrow-left"></i> Back to Setup
-                </button>
-            </div>
         </div>
     </div>
 
@@ -510,19 +473,13 @@
             // Page navigation elements
             const pages = {
                 home: document.getElementById('page1'),
-                bookmarklet: document.getElementById('page2'),
-                video: document.getElementById('video-modal')
+                bookmarklet: document.getElementById('page2')
             };
             
             const buttons = {
                 bookmarkletBtn: document.getElementById('bookmarklet-btn'),
-                backButton: document.getElementById('back-button'),
-                watchBtns: document.querySelectorAll('.watch-btn'),
-                closeVideo: document.getElementById('close-video'),
-                backFromVideo: document.getElementById('back-from-video')
+                backButton: document.getElementById('back-button')
             };
-            
-            const videoIframe = document.getElementById('setup-video');
             
             // Navigation functions
             function showPage(page) {
@@ -533,24 +490,6 @@
             // Event listeners
             buttons.bookmarkletBtn.addEventListener('click', () => showPage(pages.bookmarklet));
             buttons.backButton.addEventListener('click', () => showPage(pages.home));
-            buttons.backFromVideo.addEventListener('click', () => showPage(pages.home));
-            buttons.closeVideo.addEventListener('click', () => showPage(pages.home));
-            
-            // Video buttons
-            buttons.watchBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const videoUrl = this.getAttribute('data-video');
-                    videoIframe.src = videoUrl;
-                    showPage(pages.video);
-                });
-            });
-            
-            // Reset video when leaving video page
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    videoIframe.src = '';
-                }
-            });
         });
     </script>
 </body>
